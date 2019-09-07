@@ -1,31 +1,31 @@
 {
-  "name"       : "@philam18/nfw",
-  "version"    : "2.0.1",
+  "name": "@philam18/nfw",
+  "version": "2.0.2",
   "description": "NodeFrameWork",
-  "types"      : "dist/index.d.ts",
-  "main"       : "dist/index.js",
-  "scripts"    : {
+  "types": "dist/index.d.ts",
+  "main": "dist/index.js",
+  "scripts": {
     "build": "tsc",
-    "test" : "npm run build && node dist/test/test.js"
+    "test": "npm run build && node dist/test/test.js"
   },
   "repository": {
     "type": "git",
-    "url" : "git+https://github.com/Philam18/nfw.git"
+    "url": "git+https://github.com/Philam18/nfw.git"
   },
-  "author" : "Philip Lam",
+  "author": "Philip Lam",
   "license": "MIT",
-  "bugs"   : {
+  "bugs": {
     "url": "https://github.com/Philam18/nfw/issues"
   },
-  "homepage"    : "https://github.com/Philam18/nfw#readme",
+  "homepage": "https://github.com/Philam18/nfw#readme",
   "dependencies": {
-    "@types/ejs" : "^2.6.3",
+    "@types/ejs": "^2.6.3",
     "@types/node": "^12.7.4",
-    "ejs"        : "^2.7.1",
-    "typescript" : "^3.6.2"
+    "ejs": "^2.7.1",
+    "typescript": "^3.6.2"
   },
-  "files" : [
+  "files": [
     "dist/**/*"
   ],
-  "prepare" : "npm run build"
+  "prepare": "npm run build"
 }
