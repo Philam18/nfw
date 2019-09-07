@@ -1,6 +1,2 @@
-import { NodeFramework } from "../src/index";
-
-const app = new NodeFramework();
-app.serve();
-
+console.log("Tests are not written yet...");
 
