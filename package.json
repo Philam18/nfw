@@ -1,24 +1,26 @@
 {
-  "name": "@philam18/nfw",
-  "version": "1.0.0",
+  "name"       : "@philam18/nfw",
+  "version"    : "1.0.1",
   "description": "NodeFrameWork",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "types"      : "dist/index.d.ts",
+  "main"       : "dist/index.ts",
+  "scripts"    : {
+    "test": "tsc && node dist/test/test.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Philam18/nfw.git"
+    "url" : "git+https://github.com/Philam18/nfw.git"
   },
-  "author": "Philip Lam",
+  "author" : "Philip Lam",
   "license": "MIT",
-  "bugs": {
+  "bugs"   : {
     "url": "https://github.com/Philam18/nfw/issues"
   },
-  "homepage": "https://github.com/Philam18/nfw#readme",
+  "homepage"    : "https://github.com/Philam18/nfw#readme",
   "dependencies": {
-    "@types/ejs": "^2.6.3",
+    "@types/ejs" : "^2.6.3",
     "@types/node": "^12.7.4",
-    "typescript": "^3.6.2"
-  }
+    "ejs"        : "^2.7.1",
+    "typescript" : "^3.6.2"
+  },
 }
