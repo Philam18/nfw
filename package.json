@@ -1,9 +1,9 @@
 {
   "name"       : "@philam18/nfw",
-  "version"    : "2.0.0",
+  "version"    : "2.0.1",
   "description": "NodeFrameWork",
-  "types"      : "dist/src/index.d.ts",
-  "main"       : "dist/src/index.js",
+  "types"      : "dist/index.d.ts",
+  "main"       : "dist/index.js",
   "scripts"    : {
     "build": "tsc",
     "test" : "npm run build && node dist/test/test.js"
@@ -23,5 +23,9 @@
     "@types/node": "^12.7.4",
     "ejs"        : "^2.7.1",
     "typescript" : "^3.6.2"
-  }
+  },
+  "files" : [
+    "dist/**/*"
+  ],
+  "prepare" : "npm run build"
 }
