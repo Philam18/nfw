@@ -1,4 +1,3 @@
-
 import * as EJS from 'ejs';
 
 export interface IObject

@@ -1,4 +1,4 @@
-import { NodeFramework } from "../index";
+import { NodeFramework } from "../src/index";
 
 const app = new NodeFramework();
 app.serve();
