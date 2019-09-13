@@ -5,7 +5,7 @@ import { IObject    } from './util/IObject';
 export class Route
 {
 	public path        : string;
-	public method      : HTTPMethod;
+	public method      : string | HTTPMethod;
 	public template?   : string | null;
 	public controller? : Controller | null;
 	

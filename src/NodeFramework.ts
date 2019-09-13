@@ -1,11 +1,19 @@
+import { RouteConfigurator } from "./RouteConfigurator";
+import { Configuration } from ".";
+
 export class NodeFramework
 {
-	public loadConfig(config : Object) : void
+	private route_configurator : RouteConfigurator;
+	private configuration : Configuration;
+	
+	public constructor(route_configurator : RouteConfigurator, configuration : Configuration)
 	{
+		this.route_configurator = route_configurator;
+		this.configuration = configuration;
 		
 	}
 	
-	public serve()
+	public static serve()
 	{
 		// Error catch
 		process.on('uncaughtException', (err) => {

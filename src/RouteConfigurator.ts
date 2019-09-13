@@ -5,8 +5,8 @@ import { Controller } from './Controller';
 
 export class RouteConfigurator
 {
-	private static s_instance : RouteConfigurator | undefined;
-	public registry : Route[];
+	private static s_instance : RouteConfigurator;
+	private registry : Route[];
 	
 	private constructor()
 	{
@@ -15,25 +15,19 @@ export class RouteConfigurator
 	
 	private static instance() : RouteConfigurator
 	{
-		if (RouteConfigurator.s_instance === undefined) {
+		if (!RouteConfigurator.s_instance) {
 			RouteConfigurator.s_instance = new RouteConfigurator();
 		}
 		return RouteConfigurator.s_instance;
-	}
-	
-	public static register(path : string, method : HTTPMethod, controller : string) : void
-	{
-		let instance = RouteConfigurator.instance();
-		
 	}
 	
 	/**
 	 * Parses a Route's array, and returns an array of 
 	 * @param routes_json IObject 
 	 */
-	public static registerFromJSON(routes_json : IObject[]) : IObject[]
+	public static register(routes_json : IObject[]) : void
 	{
-		return (function parseRoutes(routes : IObject[], properties : IObject = {}) : Route[]
+		RouteConfigurator.instance().registry = (function parseRoutes(routes : IObject[], properties : IObject = {}) : Route[]
 		{
 			let routes_pre : IObject[] = [];
 
@@ -69,11 +63,14 @@ export class RouteConfigurator
 			return routes_pre.map((obj)=>{
 				
 				return Route.create(obj);
-			});;
+			});
 		})(routes_json);
 	}
 	
-	
+	public static load() : Route[]
+	{
+		return RouteConfigurator.instance().registry;
+	}
 	
 }
 
